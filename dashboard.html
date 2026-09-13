@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard JKA</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+    
+   <button id="mobileMenuBtn" type="button"
+    onclick="document.querySelector('.sidebar').classList.toggle('mobile-open')">
+    ☰
+</button>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">JKA</div>
+
+            <div>
+                <h3>PETA DIGITAL</h3>
+                <span>Jabatan Kejuruteraan Awam</span>
+            </div>
+        </div>
+
+
+        <div class="menu-title">
+            NAVIGASI
+        </div>
+
+
+        <button class="menu active">
+            <span>⌖</span>
+            Peta Fasiliti
+        </button>
+
+
+        <button class="menu" onclick="toggleLocationMenu()">
+    <span>⌕</span>
+    Cari Bilik
+</button>
+
+<div id="locationMenu" class="location-menu">
+
+    <div class="location-title">BANGUNAN JKA</div>
+
+    <div class="floor-title">ARAS G</div>
+
+    <button onclick="selectLocation('Dataran JKA')">Dataran JKA</button>
+    <button onclick="selectLocation('Bilik Pensyarah Aras G')">Bilik Pensyarah Aras G</button>
+    <button onclick="selectLocation('Studio Senibina 1')">Studio Senibina 1</button>
+    <button onclick="selectLocation('Surau')">Surau</button>
+    <button onclick="selectLocation('Tandas Aras G')">Tandas Aras G</button>
+    <button onclick="selectLocation('Bilik CESCOMB')">Bilik CESCOMB</button>
+    <button onclick="selectLocation('TECC')">TECC</button>
+    <button onclick="selectLocation('Bilik Kuliah 2'); tutupSidebarTelefon();">
+    Bilik Kuliah 2
+</button>
+    <button onclick="selectLocation('Bilik Kuliah 3')">Bilik Kuliah 3</button>
+
+    <div class="floor-title">ARAS 1</div>
+
+<button onclick="selectLocation('Makmal AutoCAD 1')">Makmal AutoCAD 1</button>
+<button onclick="selectLocation('Bilik Pensyarah Aras 1')">Bilik Pensyarah Aras 1</button>
+<button onclick="selectLocation('Bilik TS. Dr. Amran Bin Atan')">Bilik TS. Dr. Amran Bin Atan</button>
+<button onclick="selectLocation('Tandas Aras 1')">Tandas Aras 1</button>
+<button onclick="selectLocation('Studio Senibina 2')">Studio Senibina 2</button>
+<button onclick="selectLocation('Bilik Kuliah 4')">Bilik Kuliah 4</button>
+<button onclick="selectLocation('Bilik Kuliah 5')">Bilik Kuliah 5</button>
+<button onclick="selectLocation('Bilik Kuliah 6')">Bilik Kuliah 6</button>
+
+<div class="floor-title">ARAS 2</div>
+
+<button onclick="selectLocation('Bilik Kuliah 9')">Bilik Kuliah 9</button>
+<button onclick="selectLocation('Bilik Kuliah 8')">Bilik Kuliah 8</button>
+<button onclick="selectLocation('Bilik Kuliah 7')">Bilik Kuliah 7</button>
+<button onclick="selectLocation('Studio Senibina 3')">Studio Senibina 3</button>
+<button onclick="selectLocation('Tandas Aras 2')">Tandas Aras 2</button>
+<button onclick="selectLocation('Bilik Pensyarah Aras 2')">Bilik Pensyarah Aras 2</button>
+<button onclick="selectLocation('AVA 2')">AVA 2</button>
+
+<div class="floor-title">ARAS 3</div>
+
+<button onclick="selectLocation('Tandas Aras 3')">Tandas Aras 3</button>
+<button onclick="selectLocation('Studio Senibina 4')">Studio Senibina 4</button>
+<button onclick="selectLocation('Bilik Kuliah 10')">Bilik Kuliah 10</button>
+<button onclick="selectLocation('Bilik Kuliah 11')">Bilik Kuliah 11</button>
+<button onclick="selectLocation('Bilik Kuliah 12')">Bilik Kuliah 12</button>
+
+<div class="floor-title">ARAS 4</div>
+
+<button onclick="selectLocation('Bilik Kuliah 15')">
+    Bilik Kuliah 15
+</button>
+
+<button onclick="selectLocation('Bilik Kuliah 14')">
+    Bilik Kuliah 14
+</button>
+
+<button onclick="selectLocation('Bilik Kuliah 13')">
+    Bilik Kuliah 13
+</button>
+
+<button onclick="selectLocation('Studio Senibina 5')">
+    Studio Senibina 5
+</button>
+
+<button onclick="selectLocation('Tandas Aras 4')">
+    Tandas Aras 4
+</button>
+
+<div class="floor-title">FASILITI LAIN</div>
+
+<button onclick="selectLocation('Parking')">
+    Parking
+</button>
+
+<button onclick="selectLocation('Makmal Geoteknik')">
+    Makmal Geoteknik
+</button>
+
+<button onclick="selectLocation('Bengkel Kayu')">
+    Bengkel Kayu
+</button>
+
+<button onclick="selectLocation('Bengkel Bata')">
+    Bengkel Bata
+</button>
+
+<button onclick="selectLocation('Makmal Konkrit')">
+    Makmal Konkrit
+</button>
+
+<button onclick="selectLocation('Bengkel Paip')">
+    Bengkel Paip
+</button>
+
+<button onclick="selectLocation('Makmal Struktur')">
+    Makmal Struktur
+</button>
+
+<button onclick="selectLocation('Makmal Foto 1')">
+    Makmal Foto 1
+</button>
+
+<button onclick="selectLocation('Makmal Foto 2')">
+    Makmal Foto 2
+</button>
+
+<button onclick="selectLocation('Makmal GIS')">
+    Makmal GIS
+</button>
+
+<button onclick="selectLocation('Bilik Pensyarah')">
+    Bilik Pensyarah
+</button>
+
+<button onclick="selectLocation('Makmal Ukur')">
+    Makmal Ukur
+</button>
+
+<button onclick="selectLocation('Dewan Kuliah JKA')">
+    Dewan Kuliah JKA
+</button>
+
+</div>
+
+
+
+        <div class="sidebar-bottom">
+
+            <button class="back" onclick="goHome()">
+                ← Muka Depan
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header>
+
+            <div>
+                <h1>Peta Fasiliti</h1>
+
+                <p>
+                    Fasiliti Utama Jabatan Kejuruteraan Awam
+                </p>
+            </div>
+
+
+            <div class="status">
+                <span class="dot"></span>
+                SISTEM AKTIF
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH -->
+        <section class="search-box">
+
+            <div class="search-icon">
+                ⌕
+            </div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Cari bilik atau fasiliti..."
+            >
+
+            <button onclick="searchRoom()">
+                CARI
+            </button>
+
+        </section>
+
+
+        <!-- MAP -->
+        <section class="map-container">
+            <button id="myLocationBtn" onclick="getMyLocation()">
+    📍 LOKASI SAYA
+</button>
+
+            <div class="map-placeholder">
+
+    <iframe
+    id="qgisMap"
+    src="map.html.html"
+    class="qgis-map"
+    title="Peta Digital JKA">
+</iframe>
+
+</div>
+
+
+            <!-- MAP INFO -->
+            <div class="map-info">
+
+                <div>
+                    <small>LOKASI DIPILIH</small>
+
+                    <strong id="selectedName">
+                        Tiada lokasi dipilih
+                    </strong>
+                </div>
+
+
+                <div>
+                    <small>ARAS</small>
+
+                    <strong id="selectedFloor">
+                        -
+                    </strong>
+                </div>
+
+
+                <button
+    class="view360"
+    onclick="view360()"
+>
+    LIHAT 360 →
+</button>
+
+<button class="navigate" onclick="navigateToLocation()">
+    📍 NAVIGASI
+</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM CARDS -->
+        <section class="cards">
+
+            <div class="card">
+
+                <span class="card-icon">⌖</span>
+
+                <div>
+                    <small>FASILITI</small>
+                    <h3>Jabatan Kejuruteraan Awam</h3>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-icon">▣</span>
+
+                <div>
+                    <small>DATA SPATIAL</small>
+                    <h3>GIS & Web GIS</h3>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-icon">360°</span>
+
+                <div>
+                    <small>PANORAMA</small>
+                    <h3>Kuula 360°</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
