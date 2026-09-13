@@ -1275,3 +1275,16 @@ header p {
     align-items: center !important;
     justify-content: center !important;
 }
+
+#myLocationBtn {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+
+    z-index: 999999 !important;
+
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+
+    cursor: pointer !important;
+}
