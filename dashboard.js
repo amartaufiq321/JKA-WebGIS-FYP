@@ -1147,7 +1147,7 @@ let myLocationOverlay = null;
 function getMyLocation() {
 
     if (!navigator.geolocation) {
-        alert("Browser anda tidak menyokong fungsi lokasi.");
+        alert("Fungsi lokasi dipanggil");
         return;
     }
 
