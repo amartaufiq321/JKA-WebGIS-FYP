@@ -1153,24 +1153,19 @@ function getMyLocation() {
 
     const iframe = document.getElementById("qgisMap");
 
-    if (!iframe) {
-        alert("Peta tidak dijumpai.");
-        return;
-    }
-
-    const mapWindow = iframe.contentWindow;
-
-    if (!mapWindow.map || !mapWindow.ol) {
-        alert("Peta belum siap dimuatkan. Sila cuba lagi.");
-        return;
-    }
-
-    const map = mapWindow.map;
-    const ol = mapWindow.ol;
-
-    navigator.geolocation.getCurrentPosition(
+navigator.geolocation.getCurrentPosition(
 
         function(position) {
+
+            const mapWindow = iframe.contentWindow;
+
+if (!mapWindow.map || !mapWindow.ol) {
+    alert("Peta belum siap dimuatkan. Sila cuba lagi.");
+    return;
+}
+
+const map = mapWindow.map;
+const ol = mapWindow.ol;
 
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
